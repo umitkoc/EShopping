@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 
-namespace Catalog.Application.Mappers;
+namespace Basket.Application.Mappers;
 
 public class Mapper
 {
-    private static readonly Lazy<IMapper> Lazy = new Lazy<IMapper>(() =>
+    private static readonly Lazy<IMapper> Lazy = new(() =>
     {
         var config=new MapperConfiguration(cfg=>
         {
@@ -15,5 +15,5 @@ public class Mapper
     });
 
 
-    public static IMapper ProductMapper => Lazy.Value;
+    public static IMapper CardMapper => Lazy.Value;
 }
