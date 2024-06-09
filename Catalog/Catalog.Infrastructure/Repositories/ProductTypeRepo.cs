@@ -42,9 +42,10 @@ public class ProductTypeRepo:IProductTypeRepo
         return result.IsAcknowledged && result.DeletedCount > 0;
     }
 
-    public Task<bool> RemoveTypes()
+    public async Task<bool> RemoveTypes()
     {
-        throw new NotImplementedException();
+        var result = await _context.Types.DeleteManyAsync(i => true);
+        return result.IsAcknowledged && result.DeletedCount > 0;
     }
 
     public async Task<bool> UpdateType(ProductType productType)
