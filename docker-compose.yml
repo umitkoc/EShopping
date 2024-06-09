@@ -10,3 +10,15 @@
     build:
       context: .
       dockerfile: Basket/Basket.API/Dockerfile
+
+  discount.api:
+    image: discount.api
+    build:
+      context: .
+      dockerfile: Discount/Discount.API/Dockerfile
+
+  order.api:
+    image: order.api
+    build:
+      context: .
+      dockerfile: Order/Order.API/Dockerfile
